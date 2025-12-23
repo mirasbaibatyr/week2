@@ -21,5 +21,6 @@ public class FitnessClass {
     public void setMaxParticipants(int maxParticipants) { this.maxParticipants = maxParticipants; }
     public String toString() {
         return "Gym_system.FitnessClass{id=" + id + ", name='" + name + "', trainer=" + trainer.getName() + ", maxParticipants=" + maxParticipants + "}";
+
     }
 }

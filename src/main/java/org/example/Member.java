@@ -26,5 +26,6 @@ public class Member {
     public void setActive(boolean active) { this.active = active; }
     public String toString() {
         return "Gym_system.Member{id=" + id + ", name='" + name + "', age=" + age + ", active=" + active + "}";
+
     }
 }

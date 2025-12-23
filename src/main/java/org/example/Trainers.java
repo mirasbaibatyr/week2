@@ -25,5 +25,6 @@ public class Trainers {
 
     public String toString() {
         return "Trainer{id=" + id + ", name='" + name + "', specialization='" + specialization + "', experienceYears=" + experienceYears + "}";
+
     }
 }
