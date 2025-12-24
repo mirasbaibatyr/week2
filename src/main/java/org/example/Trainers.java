@@ -6,13 +6,27 @@ public class Trainers {
     private String specialization;
     private int experienceYears;
 
-
     public Trainers(int id, String name, String specialization, int experienceYears) {
         this.id = id;
         this.name = name;
         this.specialization = specialization;
         this.experienceYears = experienceYears;
     }
+
+    public String checkExpertiseLevel() {
+        if (this.experienceYears < 2) {
+            return "Junior Trainer";
+        } else if (this.experienceYears < 5) {
+            return "Senior Trainer";
+        } else {
+            return "Expert Trainer";
+        }
+    }
+
+    public boolean matchSpecialization(String requiredSpecialization) {
+        return this.specialization.equalsIgnoreCase(requiredSpecialization);
+    }
+
     public int getId() { return id; }
     public String getName() { return name; }
     public String getSpecialization() { return specialization; }
@@ -25,6 +39,5 @@ public class Trainers {
 
     public String toString() {
         return "Trainer{id=" + id + ", name='" + name + "', specialization='" + specialization + "', experienceYears=" + experienceYears + "}";
-
     }
 }

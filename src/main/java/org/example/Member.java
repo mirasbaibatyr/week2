@@ -6,7 +6,6 @@ public class Member {
     private int age;
     private boolean active;
 
-
     public Member(int id, String name, int age, boolean active) {
         this.id = id;
         this.name = name;
@@ -14,6 +13,24 @@ public class Member {
         this.active = active;
     }
 
+    public String renewMembership() {
+        if (this.active) {
+            return "Member " + this.name + " is already active.";
+        } else {
+            this.active = true;
+            return "Membership for " + this.name + " has been successfully renewed.";
+        }
+    }
+
+    public String calculateDiscountCategory() {
+        if (this.age < 18) {
+            return "Junior Discount (20% off)";
+        } else if (this.age >= 60) {
+            return "Senior Discount (30% off)";
+        } else {
+            return "Standard Rate";
+        }
+    }
 
     public int getId() { return id; }
     public String getName() { return name; }
@@ -24,8 +41,8 @@ public class Member {
     public void setName(String name) { this.name = name; }
     public void setAge(int age) { this.age = age; }
     public void setActive(boolean active) { this.active = active; }
+
     public String toString() {
         return "Gym_system.Member{id=" + id + ", name='" + name + "', age=" + age + ", active=" + active + "}";
-
     }
 }
